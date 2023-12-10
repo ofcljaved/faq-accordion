@@ -10,11 +10,17 @@
       href="/assets/images/favicon-32x32.png"
     />
     <title>Frontend Mentor | FAQ accordion</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="/src/style.css" />
   </head>
   <body>
-    <main>
-      <h1>
+    <article class="accordion-wrapper">
+      <h1 class="accordion-title">
         <span aria-hidden="true"
           ><svg
             xmlns="http://www.w3.org/2000/svg"
@@ -29,7 +35,7 @@
             /></svg></span
         >FAQs
       </h1>
-      <ul>
+      <ul class="accordion-list">
         <li class="active">
           <button>
             What is Frontend Mentor, and how will it help me?
@@ -125,14 +131,14 @@
           </p>
         </li>
       </ul>
-    </main>
+    </article>
 
-    <div class="attribution">
+    <!-- <div class="attribution">
       Challenge by
       <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
         >Frontend Mentor</a
       >. Coded by <a href="#">Your Name Here</a>.
-    </div>
+    </div> -->
     <script type="module" src="/src/main.ts"></script>
   </body>
 </html>
