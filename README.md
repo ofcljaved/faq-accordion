@@ -34,7 +34,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [https://github.com/ofcljaved/faq-accordion](https://github.com/ofcljaved/faq-accordion)
-- Live Site URL: [https://ofcljaved.github.io/faq-accordion/](https://ofcljaved.github.io/faq-accordion/)
+- Live Site URL: [https://faq-accordion-ofcljaved.vercel.app/](https://faq-accordion-ofcljaved.vercel.app/)
 
 ## My process
 
