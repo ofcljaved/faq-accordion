@@ -1,4 +1,9 @@
+* {
+  box-sizing: border-box;
+}
+
 :root {
+  --clr-primary: hsl(281, 83%, 54%);
   --bg-primary: hsl(0, 0%, 100%);
   --bg-secondary: hsl(275, 100%, 97%);
   --text-primary: hsl(292, 42%, 14%);
@@ -12,11 +17,12 @@ body {
   background-color: var(--bg-secondary);
   background-image: url('/assets/images/background-pattern-mobile.svg');
   background-repeat: no-repeat;
-  background-position: top;
+  background-size: 100% auto;
   display: grid;
   margin: 0;
   padding: 1.5rem;
   place-items: center;
+  min-block-size: 100svh;
 }
 @media (width >= 376px) {
   body {
@@ -26,15 +32,22 @@ body {
 
 .accordion-wrapper {
   background-color: var(--bg-primary);
-  border-radius: 10px;
-  padding: 1.5rem;
+  border-radius: 7.5px;
+  padding: clamp(1.5rem, 2.5vw, 2.75rem);
+  box-shadow: 0px 0px 100px hsla(293, 16%, 49%, 0.25);
+  max-width: 37rem;
+}
+@media (width >= 376px) {
+  .accordion-wrapper {
+    border-radius: 15px;
+  }
 }
 
 .accordion-title {
   display: flex;
-  font-size: clamp(2rem, 3vw, 3rem);
+  font-size: clamp(2rem, 4vw, 4rem);
   font-weight: 700;
-  gap: 1rem;
+  gap: 1.25rem;
   margin-block: 0rem;
 }
 .accordion-title > span > svg {
@@ -42,7 +55,47 @@ body {
   width: 0.75em;
 }
 
-.accordion-list {
+ul.accordion-list {
   list-style-type: none;
   padding: 0;
+  margin: 0;
+}
+
+ul.accordion-list > li {
+  padding-block-start: 1.25rem;
+  margin: 0;
+  display: grid;
+  gap: 1.25rem;
+}
+ul.accordion-list > li:not(:last-child) {
+  border-bottom: 2px solid var(--bg-secondary);
+  padding-block-end: 1.25rem;
+}
+
+ul.accordion-list > li > button {
+  background: none;
+  outline: none;
+  border: none;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: 600;
+  color: var(--text-primary);
+  font-size: clamp(1rem, 1.25vw, 1.25rem);
+  text-align: start;
+  width: 100%;
+  gap: 1.75rem;
+}
+ul.accordion-list > li > button:hover,
+ul.accordion-list > li > button:active,
+ul.accordion-list > li > button:focus-visible {
+  color: var(--clr-primary);
+}
+
+ul.accordion-list > li > p {
+  color: var(--text-secondary);
+  font-size: clamp(0.9rem, 1.2vw, 1.1rem);
+  line-height: 1.5em;
+  margin: 0;
 }
