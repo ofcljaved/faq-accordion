@@ -10,12 +10,12 @@
   --text-secondary: hsl(292, 16%, 49%);
 }
 html {
-  font-family: 'Work Sans', sans-serif;
+  font-family: "Work Sans", sans-serif;
 }
 
 body {
   background-color: var(--bg-secondary);
-  background-image: url('/assets/images/background-pattern-mobile.svg');
+  background-image: url("/assets/images/background-pattern-mobile.svg");
   background-repeat: no-repeat;
   background-size: 100% auto;
   display: grid;
@@ -26,7 +26,7 @@ body {
 }
 @media (width >= 376px) {
   body {
-    background-image: url('/assets/images/background-pattern-desktop.svg');
+    background-image: url("/assets/images/background-pattern-desktop.svg");
   }
 }
 
@@ -86,6 +86,7 @@ ul.accordion-list > li > button {
   text-align: start;
   width: 100%;
   gap: 1.75rem;
+  cursor: pointer;
 }
 ul.accordion-list > li > button:hover,
 ul.accordion-list > li > button:active,
@@ -98,4 +99,14 @@ ul.accordion-list > li > p {
   font-size: clamp(0.9rem, 1.2vw, 1.1rem);
   line-height: 1.5em;
   margin: 0;
+}
+::view-transition-group(root) {
+  animation-duration: 150ms;
+}
+
+.attribution {
+  position: absolute;
+  bottom: 1rem;
+  text-align: center;
+  font-size: 0.8rem;
 }
